@@ -8,21 +8,24 @@
 import SwiftUI
 
 struct LargeCard: View {
-    var body: some View {
-			ZStack {
-				RoundedRectangle(cornerRadius: 10)
-					.foregroundColor(.blue)
-					.frame(width: 250, height: 450)
-				
-				Text("Albert Heijn")
-			}
-			.padding(.vertical, 30)
-			.rotation3DEffect(.degrees(-20.0), axis: (x: 0, y: 1, z: 0))
-    }
+	// MARK: PROPERTIES
+	var color: Color = .green
+	
+	// MARK: BODY
+	var body: some View {
+		ZStack {
+			RoundedRectangle(cornerRadius: 10)
+				.foregroundColor(color)
+				.frame(width: 250, height: 450)
+			
+			Text("Albert Heijn")
+		}
+	}
 }
 
+// MARK: PREVIEW
 struct LargeCard_Previews: PreviewProvider {
-    static var previews: some View {
-			LargeCard().previewLayout(.sizeThatFits)
-    }
+	static var previews: some View {
+		LargeCard(color: Color("Test")).previewLayout(.sizeThatFits)
+	}
 }

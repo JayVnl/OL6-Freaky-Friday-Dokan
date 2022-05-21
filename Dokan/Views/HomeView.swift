@@ -9,6 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
 	// MARK: PROPERTIES
+	@EnvironmentObject var prismicManager: PrismicManager
 	
 	// MARK: BODY
 	var body: some View {
@@ -20,9 +21,14 @@ struct HomeView: View {
 				.frame(maxWidth: .infinity, alignment: .leading)
 			
 			ZStack(alignment: .leading) {
-				LargeCard(color: .red).padding(.leading, 120)
-				LargeCard(color: .white).padding(.leading, 60)
-				LargeCard()
+				if let stores = prismicManager.stores {
+					ForEach(stores.results.indices) { index in
+						LargeCard(store: stores.results[index])
+							.padding(.leading, CGFloat(index) * 60)
+					}
+				} else if prismicManager.isLoading {
+					ProgressView()
+				}
 			}
 			.frame(maxWidth: .infinity)
 			.gesture(DragGesture(minimumDistance: 20, coordinateSpace: .global)
@@ -58,6 +64,8 @@ struct HomeView: View {
 // MARK: PREVIEW
 struct HomeView_Previews: PreviewProvider {
 	static var previews: some View {
-		HomeView().previewDevice("iPhone 13")
+		HomeView()
+			.environmentObject(PrismicManager())
+			.previewDevice("iPhone 13")
 	}
 }

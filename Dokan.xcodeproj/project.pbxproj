@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2533DFAC2837D54A00E0B4E3 /* PrismicManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2533DFAB2837D54A00E0B4E3 /* PrismicManager.swift */; };
+		2533DFAF2837D68000E0B4E3 /* StoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2533DFAE2837D68000E0B4E3 /* StoreModel.swift */; };
+		2533DFB32838248800E0B4E3 /* API_KEYS.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2533DFB22838248800E0B4E3 /* API_KEYS.plist */; };
+		257012CF2838F12300151DA0 /* RefModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257012CE2838F12300151DA0 /* RefModel.swift */; };
 		25944F3E281980B9006F3AF6 /* DokanApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25944F3D281980B9006F3AF6 /* DokanApp.swift */; };
 		25944F40281980B9006F3AF6 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25944F3F281980B9006F3AF6 /* HomeView.swift */; };
 		25944F42281980BC006F3AF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25944F41281980BC006F3AF6 /* Assets.xcassets */; };
@@ -15,6 +19,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2533DFAB2837D54A00E0B4E3 /* PrismicManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrismicManager.swift; sourceTree = "<group>"; };
+		2533DFAE2837D68000E0B4E3 /* StoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreModel.swift; sourceTree = "<group>"; };
+		2533DFB22838248800E0B4E3 /* API_KEYS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = API_KEYS.plist; sourceTree = "<group>"; };
+		257012CE2838F12300151DA0 /* RefModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefModel.swift; sourceTree = "<group>"; };
 		25944F3A281980B9006F3AF6 /* Dokan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dokan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25944F3D281980B9006F3AF6 /* DokanApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DokanApp.swift; sourceTree = "<group>"; };
 		25944F3F281980B9006F3AF6 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -35,6 +43,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2533DFAA2837D53000E0B4E3 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				2533DFAB2837D54A00E0B4E3 /* PrismicManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		2533DFAD2837D63D00E0B4E3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2533DFAE2837D68000E0B4E3 /* StoreModel.swift */,
+				257012CE2838F12300151DA0 /* RefModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		25944F31281980B9006F3AF6 = {
 			isa = PBXGroup;
 			children = (
@@ -54,8 +79,11 @@
 		25944F3C281980B9006F3AF6 /* Dokan */ = {
 			isa = PBXGroup;
 			children = (
+				2533DFB22838248800E0B4E3 /* API_KEYS.plist */,
 				25944F4B2819834E006F3AF6 /* Info.plist */,
 				25AE5B61283578A000635075 /* Components */,
+				2533DFAA2837D53000E0B4E3 /* Managers */,
+				2533DFAD2837D63D00E0B4E3 /* Models */,
 				25AE5B62283578EB00635075 /* Views */,
 				25944F3D281980B9006F3AF6 /* DokanApp.swift */,
 				25944F41281980BC006F3AF6 /* Assets.xcassets */,
@@ -155,6 +183,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				25944F45281980BC006F3AF6 /* Preview Assets.xcassets in Resources */,
+				2533DFB32838248800E0B4E3 /* API_KEYS.plist in Resources */,
 				25944F42281980BC006F3AF6 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -167,8 +196,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				25AE5B6628357F9800635075 /* LargeCard.swift in Sources */,
+				2533DFAC2837D54A00E0B4E3 /* PrismicManager.swift in Sources */,
 				25944F40281980B9006F3AF6 /* HomeView.swift in Sources */,
 				25944F3E281980B9006F3AF6 /* DokanApp.swift in Sources */,
+				2533DFAF2837D68000E0B4E3 /* StoreModel.swift in Sources */,
+				257012CF2838F12300151DA0 /* RefModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,23 +9,23 @@ import SwiftUI
 
 struct LargeCard: View {
 	// MARK: PROPERTIES
-	var color: Color = .green
+	var store: StoreModel.Store
 	
 	// MARK: BODY
 	var body: some View {
 		ZStack {
 			RoundedRectangle(cornerRadius: 10)
-				.foregroundColor(color)
+				.foregroundColor(.green)
 				.frame(width: 250, height: 450)
 			
-			Text("Albert Heijn")
+			Text("\(store.data.name[0].text)")
 		}
 	}
 }
 
 // MARK: PREVIEW
-struct LargeCard_Previews: PreviewProvider {
-	static var previews: some View {
-		LargeCard(color: Color("Test")).previewLayout(.sizeThatFits)
-	}
-}
+//struct LargeCard_Previews: PreviewProvider {
+//	static var previews: some View {
+//		LargeCard(store: ).previewLayout(.sizeThatFits)
+//	}
+//}
